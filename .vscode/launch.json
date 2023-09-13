@@ -20,7 +20,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args" : ["--img", "static/_frame1587.jpg", "--h_planes", "static/mp3d_model_results/09131017/_frame1587.h_planes.exr", "--v_planes", "static/mp3d_model_results/09131017/_frame1587.v_planes.exr", "--mesh"]
+            "args" : ["--img", "static/_frame1587.jpg", "--h_planes", "static/mp3d_model_results/09131017/_frame1587.h_planes.exr", "--v_planes", "static/mp3d_model_results/09131017/_frame1587.v_planes.exr", "--mesh_show_back_face"]
         }
     ]
 }
