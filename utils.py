@@ -1,6 +1,6 @@
 import os
 import importlib
-import Imath
+import imath
 import OpenEXR
 from imageio import imread
 from collections import OrderedDict

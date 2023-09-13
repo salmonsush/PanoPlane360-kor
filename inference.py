@@ -4,14 +4,14 @@ import argparse
 import numpy as np
 from tqdm import tqdm
 from imageio import imread, imwrite
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 import utils
 import models
-
+import imageio
+imageio.plugins.freeimage.download()
 
 if __name__ == '__main__':
     # Arguments

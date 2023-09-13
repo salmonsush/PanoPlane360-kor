@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PanoPlane: Inference",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args" : ["--glob", "static/_frame1587.jpg", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results"]
+        },
+        {
+            "name": "PanoPlane: vis_planes",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args" : ["--img", "static/_frame1587.jpg", "--h_planes", "static/mp3d_model_results/09131017/_frame1587.h_planes.exr", "--v_planes", "static/mp3d_model_results/09131017/_frame1587.v_planes.exr", "--mesh"]
+        }
+    ]
+}
