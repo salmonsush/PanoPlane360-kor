@@ -28,6 +28,9 @@ if __name__ == '__main__':
     parser.add_argument('--crop_black', default=80/512, type=float)
     args = parser.parse_args()
     os.makedirs(args.outdir, exist_ok=True)
+   
+    # Add a new command-line argument to toggle saving as PNG
+    parser.add_argument('--save_png', action='store_true', help='Toggle to save float32 data as PNG')
 
     # Prepare all input rgb paths
     if args.glob is not None:

@@ -55,7 +55,7 @@
                     "data"]
         },
         {
-            "name": "Read img_image",
+            "name": "Read img_data",
             "type": "python",
             "request": "launch",
             "program": "./viewer.py",
