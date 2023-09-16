@@ -10,6 +10,7 @@ __pycache__/
 
 # Byproduct
 *.xlsx
+*.patch
 
 # Distribution / packaging
 .Python
