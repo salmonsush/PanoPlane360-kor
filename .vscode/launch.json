@@ -26,7 +26,7 @@
 
         },
         {
-            "name": "Read exr",
+            "name": "Read exr_image",
             "type": "python",
             "request": "launch",
             "program": "./viewer.py",
@@ -36,13 +36,32 @@
                     "image"]
         },
         {
-            "name": "Read img",
+            "name": "Read img_image",
             "type": "python",
             "request": "launch",
             "program": "./viewer.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             "args" : ["static/_frame1587.jpg", "image"]
+        },
+        {
+            "name": "Read exr_data",
+            "type": "python",
+            "request": "launch",
+            "program": "./viewer.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args" : ["static/mp3d_model_results/230915_IMG230509_113401_359/IMG_20230509_113401_00_359.h_planes.exr",
+                    "data"]
+        },
+        {
+            "name": "Read img_image",
+            "type": "python",
+            "request": "launch",
+            "program": "./viewer.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args" : ["static/_frame1587.jpg", "data"]
         }
 
     ]
