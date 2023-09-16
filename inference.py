@@ -26,11 +26,11 @@ if __name__ == '__main__':
     parser.add_argument('--rgb_std', default=[58.395, 57.12, 57.375], type=float, nargs=3)
     parser.add_argument('--base_height', default=512, type=int)
     parser.add_argument('--crop_black', default=80/512, type=float)
-    args = parser.parse_args()
-    os.makedirs(args.outdir, exist_ok=True)
    
     # Add a new command-line argument to toggle saving as PNG
     parser.add_argument('--save_png', action='store_true', help='Toggle to save float32 data as PNG')
+    args = parser.parse_args()
+    os.makedirs(args.outdir, exist_ok=True)
 
     # Prepare all input rgb paths
     if args.glob is not None:
@@ -67,10 +67,12 @@ if __name__ == '__main__':
 
         # Dump results
         for name, v in infer_dict.items():
-            if name == 'h_planes':
-                imwrite(os.path.join(args.outdir, k + '.h_planes.exr'), v)
-            elif name == 'v_planes':
-                imwrite(os.path.join(args.outdir, k + '.v_planes.exr'), v)
+            if args.save_png and v.dtype == np.float32:
+                imwrite(os.path.join(args.outdir, k + f'.{name}.exr'), v)
+                # Scale the data to [0, 255] range
+                scaled_data = ((v - v.min()) / (v.max() - v.min()) * 255).astype(np.uint8)
+                # Save the scaled data as a PNG file
+                imwrite(os.path.join(args.outdir, k + name + '.png'), scaled_data)
             elif v.dtype == np.uint8:
                 imwrite(os.path.join(args.outdir, k + name + '.png'), v)
             else:
