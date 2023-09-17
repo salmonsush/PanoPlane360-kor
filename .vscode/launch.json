@@ -8,11 +8,12 @@
             "name": "PanoPlane: Inference",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "./inference.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            // "args" : ["--glob", "static/_frame1587.jpg", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results"]
-            "args" : ["--glob", "static/IMG_20230509_113401_00_359.jpg", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
+            // "args" : ["--glob", "static/_frame1587.jpg", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
+            // "args" : ["--glob", "static/IMG_20230509_113401_00_359.jpg", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
+            "args": ["--glob", "_frame1587_resized.png", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
         },
         {
             "name": "PanoPlane: vis_planes",
