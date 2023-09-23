@@ -12,8 +12,8 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             // "args" : ["--glob", "static/_frame1587.jpg", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
-            // "args" : ["--glob", "static/IMG_20230509_113401_00_359.jpg", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
-            "args": ["--glob", "_frame1587_resized.png", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
+            "args" : ["--glob", "static/IMG_20230509_113401_00_359.jpg", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
+            // "args": ["--glob", "_frame1587_resized.png", "--pth", "ckpt/mp3d.pth", "--outdir", "static/mp3d_model_results", "--save_png"]
         },
         {
             "name": "PanoPlane: vis_planes",
@@ -23,7 +23,8 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             // "args" : ["--img", "static/IMG_20230509_113401_00_359.jpg", "--h_planes", "static/mp3d_model_results/09131017/_frame1587.h_planes.exr", "--v_planes", "static/mp3d_model_results/09131017/_frame1587.v_planes.exr", "--mesh_show_back_face"]
-            "args" : ["--img", "static/IMG_20230509_113401_00_359.jpg", "--h_planes", "static/mp3d_model_results/230915_IMG230509_113401_359/IMG_20230509_113401_00_359.h_planes.exr", "--v_planes", "static/mp3d_model_results/230915_IMG230509_113401_359/IMG_20230509_113401_00_359.v_planes.exr", "--mesh_show_back_face"]
+            // "args" : ["--img", "static/IMG_20230509_113401_00_359.jpg", "--h_planes", "static/mp3d_model_results/230915_IMG230509_113401_359/IMG_20230509_113401_00_359.h_planes.exr", "--v_planes", "static/mp3d_model_results/230915_IMG230509_113401_359/IMG_20230509_113401_00_359.v_planes.exr", "--mesh_show_back_face"]
+            "args" : ["--img", "static/IMG_20230509_113401_00_359.jpg", "--h_planes", "static/mp3d_model_results/230915_IMG230509_113401_359/IMG_20230509_113401_00_359.h_planes.exr", "--v_planes", "static/multiple_masks_2.exr", "--mesh_show_back_face"]
 
         },
         {
@@ -33,8 +34,8 @@
             "program": "./viewer.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args" : ["static/mp3d_model_results/230915_IMG230509_113401_359/IMG_20230509_113401_00_359.h_planes.exr",
-                    "image"]
+            // "args" : ["static/mp3d_model_results/230915_IMG230509_113401_359/IMG_20230509_113401_00_359.h_planes.exr", "image"]
+            "args": ["static/multiple_masks.exr", "image"]
         },
         {
             "name": "Read img_image",
